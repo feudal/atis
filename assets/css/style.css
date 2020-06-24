@@ -71,6 +71,10 @@ a {
   .menu-bottom .menu-bottom__input {
   	display: none;
   }
+
+  h1.title__title {
+  	font-size: 100px;
+  }
 }
 
 /*****--------------------media-----------------*****/
