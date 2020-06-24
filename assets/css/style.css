@@ -60,9 +60,6 @@ a {
   }
 
   /*****--------------------menubottom-----------------*****/
-	.header .header__bottom-bar {
-		height: 250px;
-	}
 
   nav.menu-bottom ul {
     display: flex;
@@ -73,10 +70,8 @@ a {
 
   a.menu-bottom__link {
     display: block;
-    font-size: 20px;
     border-radius: 5px;
-    padding: 10px;
-    margin: 8px;
+    padding: 15px;
   }
 
   img.menu-bottom_icon {
@@ -85,7 +80,7 @@ a {
   }
 
   a.menu-bottom__link_search {
-		width: 100%;
+    width: 100%;
   }
 
   input.menu-bottom__input {
@@ -96,31 +91,59 @@ a {
   input.menu-bottom__input_active {
     width: 100%;
   }
+
+  /*****--------------------xphone problem-----------------*****/
+  div.header__top-bar {
+    margin-top: 30px;
+  }
+
+  div.title__subtitle {
+    margin-top: 0;
+  }
+
+  h1.title__title {
+    font-size: 120px;
+  }
+
+  button.title__button {
+    margin: 10px;
+  }
+
+  .header .header__bottom-bar {
+    height: 110px;
+  }
+
+   input.menu-bottom__input {
+    background: url('../img/Search.png') no-repeat 15px 10px, #fff;
+    height: 35px;
+    padding: 5px;
+    padding-left: 35px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  div.header__top-bar {
+    margin-top: 30px;
+  }
+
   .container {
     max-width: 90%;
   }
 
   h1.title__title {
-    font-size: 100px;
+    font-size: 80px;
   }
 
-  .header .header__bottom-bar {
-		height: 250px;
-	}
-
+  a.menu-bottom__link {
+    padding: 8px;
+    margin: 2px;
+  }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 420px) {
   .header .header__bottom-bar {
-		height: 320px;
-	}
-	header.header {
-	  width: 100vw;
-	  height: 820px;
-	}
+    height: 210px;
+  }
 
 }
 
