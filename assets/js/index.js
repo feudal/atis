@@ -21,51 +21,49 @@ $(document).ready(function() {
   function menuBurger() {
     $menu_burger = $(".menu-burger");
     $menu = $(".menu");
-    let clicked = false;
+    let result;
 
-/*    let clickout = function () {
-    	$(document).on("click", function(event){
-    	if((clicked) && (!$(event.target).closest(".menu").length)){
-    		console.log('123');
-    		console.log($menu.hasClass('menu_mobile'));
-    		$menu.removeClass('menu_mobile');
-    	}
+    $(document).click(function(event) {
+      $target = $(event.target);
+      if ($target.closest('.menu-burger').length) {
+      	result = 1;
+      	console.log(1);
+      }
+      if (!$target.closest('.menu,.menu-burger').length) {
+      	result = 2;
+      	console.log(2);
+      }
+
+      switch (result) {
+        case 1:
+          $menu.toggleClass('menu_mobile');
+          $menu_burger.toggleClass('menu-burger_mobile');
+          break;
+        case 2:
+          $menu.removeClass('menu_mobile');
+          $menu_burger.removeClass('menu-burger_mobile');
+          break;
+        case 3:
+          break;
+        default:
+          break;
+      }
     });
-    }*/
+  }
 
-    $menu_burger.on("click", function() {
-    	console.log('456');
-    	clicked = true;
-      $menu.toggleClass('menu_mobile');
-      $menu_burger.toggleClass('menu-burger_mobile');
-    });
-    
+  menuBurger();
 
-	}
-    /*    $(document).on("click", function(event){
-            if(!$(event.target).closest(".dropdown").length){
-                $(".dropdown-menu").slideUp("fast");
-                
-                // Showing the hint message
-                $(".hint").html("A click <b>outside</b> the dropdown is detected.");
-            }
-        });*/
+  function input() {
+    $menu_bottom__input = $('.menu-bottom__input');
+    $menu_bottom__input.focus(function() {
+      $(this).addClass('menu-bottom__input_active');
+    })
+    $menu_bottom__input.focusout(function() {
+      $(this).removeClass('menu-bottom__input_active');
+      $(this).val("");
+    })
+  }
 
-    menuBurger();
+  input();
 
-    function input() {
-      $menu_bottom__input = $('.menu-bottom__input');
-      $menu_bottom__input.focus(function() {
-        $(this).addClass('menu-bottom__input_active');
-      })
-      $menu_bottom__input.focusout(function() {
-        $(this).removeClass('menu-bottom__input_active');
-        $(this).val("");
-      })
-    }
-
-
-
-    input();
-
-  });
+});
