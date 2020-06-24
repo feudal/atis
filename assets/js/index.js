@@ -18,17 +18,54 @@ $(document).ready(function() {
 
   menu();
 
-  function input() {
-    $menu_bottom__input = $('.menu-bottom__input');
-    $menu_bottom__input.focus(function() {
-      $(this).addClass('menu-bottom__input_active');
-    })
-    $menu_bottom__input.focusout(function() {
-      $(this).removeClass('menu-bottom__input_active');
-      $(this).val("");
-    })
-  }
+  function menuBurger() {
+    $menu_burger = $(".menu-burger");
+    $menu = $(".menu");
+    let clicked = false;
 
-  input();
+/*    let clickout = function () {
+    	$(document).on("click", function(event){
+    	if((clicked) && (!$(event.target).closest(".menu").length)){
+    		console.log('123');
+    		console.log($menu.hasClass('menu_mobile'));
+    		$menu.removeClass('menu_mobile');
+    	}
+    });
+    }*/
 
-});
+    $menu_burger.on("click", function() {
+    	console.log('456');
+    	clicked = true;
+      $menu.toggleClass('menu_mobile');
+      $menu_burger.toggleClass('menu-burger_mobile');
+    });
+    
+
+	}
+    /*    $(document).on("click", function(event){
+            if(!$(event.target).closest(".dropdown").length){
+                $(".dropdown-menu").slideUp("fast");
+                
+                // Showing the hint message
+                $(".hint").html("A click <b>outside</b> the dropdown is detected.");
+            }
+        });*/
+
+    menuBurger();
+
+    function input() {
+      $menu_bottom__input = $('.menu-bottom__input');
+      $menu_bottom__input.focus(function() {
+        $(this).addClass('menu-bottom__input_active');
+      })
+      $menu_bottom__input.focusout(function() {
+        $(this).removeClass('menu-bottom__input_active');
+        $(this).val("");
+      })
+    }
+
+
+
+    input();
+
+  });
