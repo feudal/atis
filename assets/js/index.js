@@ -43,8 +43,6 @@ $(document).ready(function() {
           $menu.removeClass('menu_mobile');
           $menu_burger.removeClass('menu-burger_mobile');
           break;
-        case 3:
-          break;
         default:
           break;
       }
