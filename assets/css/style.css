@@ -32,7 +32,6 @@ a {
 .container-big {
   max-width: 2000px;
   margin: 0 auto;
-  padding: 0 1em;
 }
 
 /*****--------------------media-----------------*****/
@@ -334,6 +333,10 @@ a {
   font-size: 16px;
 }
 
+.menu-bottom__link:hover {
+	text-decoration: underline;
+}
+
 .menu-bottom_icon {
   vertical-align: bottom;
   margin-right: 12px;
@@ -377,10 +380,8 @@ a {
 .container-big__block-img {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-  grid-gap: 1em;
-  //grid-auto-rows: 50%;
-  //grid-auto-rows: minmax(272px, auto);
-  //grid-auto-flow: row dense; 
+  grid-gap: 1em;  
+  padding: 0 1em;
 }
 
 .container-big__block-img2 {
@@ -629,6 +630,14 @@ a {
 }
 
 .block-hotel__stars {
+	margin-top: 10px;
+}
+
+.stars__caunt {
+	font-size: 0;
+}
+
+.block-hotel__star {
   width: 15px;
   height: 15px;
   display: inline-block;
@@ -726,7 +735,7 @@ a {
   }
 
   .block-hotel__link {
-    padding: 10px 35px;
+    padding: 12px 35px;
     bottom: -20px;
   }
 
@@ -742,3 +751,96 @@ a {
 }
 
 /*****--------------------media-----------------*****/
+/*****--------------------slider-----------------*****/
+.slider {
+	position: relative;
+	min-width: 0;
+	margin: 0 1em;
+}
+.slider img {
+	width: 100%;
+}
+/* Слайдер */
+.slick-slider{
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+/* Стрелка */
+.slick-arrow{
+	border: 1px solid red;
+	font-size: 0;
+	border: 0;
+	width: 50px;
+	height: 100px;
+
+	position: absolute;
+	z-index: 100;
+	top: calc(50% - 50px);
+}
+/* Стрелка влево */
+.slider .slick-arrow.slick-prev{
+	background: url("../img/LeftArrow.png") no-repeat center;
+	left: 10%;
+}
+/* Стрелка вправо */
+.slider .slick-arrow.slick-next{
+	background: url("../img/RightArrow.png") no-repeat center;
+	right: 10%;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{
+	opacity: .6;
+}
+/* Точки (булиты) */
+.slick-dots{	
+  position: absolute;
+  bottom: 10%;
+  left: calc(50% - 30px);
+}
+.slick-dots li{
+	font-size: 0;
+		display: inline-block;
+
+}
+/* Активная точка */
+.slick-dots li.slick-active{
+	background-color: #fff;
+		height: 10px;
+	width: 10px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+/* Элемент точки */
+.slick-dots li button{
+	height: 10px;
+	width: 10px;
+	margin-right: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 0;
+}
+
+
+
+
+/*****--------------------footer-----------------*****/
+.footer {
+	color: #bdbdbd;
+	text-align: center;
+	margin: 60px auto;
+}
+.footer__title {
+	font-family: 'Molle';
+	font-size: 36px;
+}
+
+.footer__text {
+	display: inline-block;
+	font-size: 18px;
+	margin-top: 30px;
+}

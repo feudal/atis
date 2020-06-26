@@ -64,24 +64,9 @@ $(document).ready(function() {
 
   input();
 
-  function star() {
-  	$star = $(".block-hotel__stars");
-  	let nr = 0;
-  	$starrr = $(".star");
-
-  	
-
-/*  	$star.each(function(index, el) {
-  		nr = $star.text();
-  		if(nr.isInteger()) {
-  			for(let i = 0; i < nr; i++) {
-
-  			}
-  		} else {
-  			console.log("error is not integer!");
-  		}*/
-
-  	});
-  }
+/*  $('.slider').slick({
+        arrows: true,
+        dots: true,
+    });*/
 
 });
