@@ -64,9 +64,10 @@ $(document).ready(function() {
 
   input();
 
-/*  $('.slider').slick({
-        arrows: true,
-        dots: true,
-    });*/
+  $('.slider').slick({
+    arrows: true,
+    dots: true,
+    adaptiveHeight: true
+  });
 
 });
